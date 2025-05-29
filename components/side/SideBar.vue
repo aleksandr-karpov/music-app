@@ -15,12 +15,12 @@ const discoverNavigation: NavigationGroup = {
     {
       title: 'Browse',
       icon: defineAsyncComponent(() => import('~/assets/icons/svg/search.svg')),
-      navPath: '/',
+      navPath: '/browse',
     },
     {
       title: 'Radio',
       icon: defineAsyncComponent(() => import('~/assets/icons/svg/radio.svg')),
-      navPath: '/',
+      navPath: '/radio',
     },
   ]
 }
@@ -31,17 +31,17 @@ const libraryNavigation: NavigationGroup = {
     {
       title: 'Playlists',
       icon: defineAsyncComponent(() => import('~/assets/icons/svg/list.svg')),
-      navPath: '/',
+      navPath: '/playlists',
     },
     {
       title: 'Songs',
       icon: defineAsyncComponent(() => import('~/assets/icons/svg/music.svg')),
-      navPath: '/',
+      navPath: '/songs',
     },
     {
       title: 'Personal picks',
       icon: defineAsyncComponent(() => import('~/assets/icons/svg/smile.svg')),
-      navPath: '/',
+      navPath: '/personal',
     },
   ]
 }
