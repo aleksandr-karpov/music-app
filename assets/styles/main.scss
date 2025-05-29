@@ -1,0 +1,15 @@
+@use 'normilize';
+@use 'variables' as *;
+
+@font-face {
+  src: url('/assets/fonts/Inter.ttf') format('truetype');
+  font-family: 'Inter';
+}
+
+body {
+  font-family: $font-family;
+}
+
+#__nuxt {
+  height: 100vh;
+}
