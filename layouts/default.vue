@@ -1,6 +1,6 @@
 <template>
   <div class="default-layout">
-    <aside class="default-layout__sidebar"></aside>
+    <SideBar class="default-layout__sidebar"/>
     <main class="default-layout__main-view vertical-scroll-area">
       <slot />
     </main>
@@ -11,10 +11,6 @@
 .default-layout {
   display: flex;
   height: 100%;
-
-  &__sidebar {
-    width: 255px;
-  }
 
   &__main-view {
     flex: 1;
