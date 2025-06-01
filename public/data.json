@@ -1,0 +1,56 @@
+{
+  "playlists": [
+    {
+      "title": "Playlist 1",
+      "description": "Description of playlist",
+      "img_src": "/assets/images/playlist_1.png"
+    },
+    {
+      "title": "Playlist 2",
+      "description": "Description of playlist",
+      "img_src": "/assets/images/playlist_2.png"
+    },
+    {
+      "title": "Playlist 3",
+      "description": "Description of playlist",
+      "img_src": "/assets/images/playlist_3.png"
+    },
+    {
+      "title": "Playlist 4",
+      "description": "Description of playlist",
+      "img_src": "/assets/images/playlist_4.png"
+    }
+  ],
+  "artists": [
+    {
+      "name": "Artist Name",
+      "description": "R&B",
+      "img_src": "/assets/images/artist_1.png"
+    },
+    {
+      "name": "Artist Name",
+      "description": "Indie pop",
+      "img_src": "/assets/images/artist_2.png"
+    },
+    {
+      "name": "Artist Name",
+      "description": "Hip hop",
+      "img_src": "/assets/images/artist_3.png"
+    },
+    {
+      "name": "Artist Name",
+      "description": "Electronic",
+      "img_src": "/assets/images/artist_4.png"
+    },
+    {
+      "name": "Artist Name",
+      "description": "R&B",
+      "img_src": "/assets/images/artist_5.png"
+    },
+    {
+      "name": "Artist Name",
+      "description": "Rock",
+      "img_src": "/assets/images/artist_6.png"
+    }
+  ]
+}
