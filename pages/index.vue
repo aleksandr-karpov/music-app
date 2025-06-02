@@ -7,6 +7,14 @@ import Stub from "~/components/base/Stub.vue";
 import PlaylistsShowcase from "~/components/showcases/PlaylistsShowcase.vue";
 import ArtistsShowcase from "~/components/showcases/ArtistsShowcase.vue";
 
+useSeoMeta({
+  title: 'Home - Music App',
+  ogTitle: 'Home - Music App',
+  description: 'This is music app!',
+  ogDescription: 'This is music app!',
+  ogImage: 'https://i.ibb.co/SXHTNdd3/2025-06-02-06-21-36.png',
+});
+
 const tabs_collection = [
   {
     name: 'tab1',
