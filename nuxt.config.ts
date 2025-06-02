@@ -7,4 +7,24 @@ export default defineNuxtConfig({
   svgo: {
     defaultImport: 'component',
   },
+  app: {
+    baseURL: process.env.NUXT_APP_BASE_URL || '/',
+    buildAssetsDir: 'assets',
+  },
+  runtimeConfig: {
+    public: {
+      baseURL: process.env.NUXT_APP_BASE_URL || '/',
+    }
+  },
+  nitro: {
+    preset: 'static',
+    baseURL: process.env.NUXT_APP_BASE_URL || '/',
+    serveStatic: true,
+  },
+  router: {
+    base: process.env.NUXT_APP_BASE_URL || '/',
+  },
+  vite: {
+    base: process.env.NUXT_APP_BASE_URL || '/',
+  },
 })

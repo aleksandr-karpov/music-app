@@ -4,7 +4,8 @@ import Card from "~/components/base/Card.vue";
 import ContentShowcase from "~/components/showcases/base/ContentShowcase.vue";
 import type { DataType, ArtistData } from "~/types/data";
 
-const { data, error } = useFetch<DataType>('data.json', { server: false });
+const baseURL = useRuntimeConfig().public.baseURL || '';
+const { data, error } = useFetch<DataType>(`${baseURL}/data.json`, { server: false });
 let artists = ref<ArtistData[] | null>();
 
 watch(data, (newData) => {

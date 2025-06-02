@@ -7,12 +7,14 @@ const { img_src, img_width, img_height, title = '', description = '' } = defineP
   title: string;
   description: string;
 }>();
+
+const baseURL = useRuntimeConfig().public.baseURL || '';
 </script>
 
 <template>
   <div class="card">
     <img
-        :src="img_src"
+        :src="`${baseURL}${img_src}`"
         :alt="`${title} image`"
         :width="img_width"
         :height="img_height"
