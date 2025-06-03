@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const { title = 'Title', subheading = 'Subheading' } = defineProps<{
+const { title, subheading } = defineProps<{
   title: string;
   subheading: string;
 }>();

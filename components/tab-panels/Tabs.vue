@@ -3,7 +3,7 @@ import type { Tab } from "~/types/tabs";
 
 const { tabs } = defineProps<{
   tabs: Tab[];
-}>()
+}>();
 const model: ReturnType<typeof defineModel> = defineModel();
 
 function changeActiveTab (tabName: Tab['name']): void {

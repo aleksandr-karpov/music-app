@@ -1,6 +1,6 @@
 <script setup lang="ts">
-const { title = 'app' } = defineProps<{
-  title: string,
+const { title } = defineProps<{
+  title: string;
 }>();
 </script>
 

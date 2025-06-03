@@ -2,7 +2,7 @@
 import { ref, onMounted, onBeforeUnmount } from 'vue';
 import ActionBtn from "~/components/base/buttons/ActionBtn.vue";
 
-const { scrollAmount = 220 } = defineProps<{
+const { scrollAmount } = defineProps<{
   scrollAmount: number;
 }>();
 

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const { img_src, img_width, img_height, title = '', description = '' } = defineProps<{
+const { img_src, img_width, img_height, title, description } = defineProps<{
   img_src: string;
   img_width: string;
   img_height: string;

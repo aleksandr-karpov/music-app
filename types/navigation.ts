@@ -8,5 +8,5 @@ export interface NavItem {
 
 export interface NavigationGroup {
     title: string;
-    items: NavItem[],
+    items: NavItem[];
 }

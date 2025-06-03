@@ -1,7 +1,7 @@
 <script setup lang="ts">
-const { msg = 'This block is empty' } = defineProps<{
-  msg?: string;
-}>()
+const { msg } = defineProps<{
+  msg: string;
+}>();
 </script>
 
 <template>

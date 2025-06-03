@@ -1,8 +1,8 @@
 <script setup lang="ts">
-const { label = 'Action Btn', disabled = false } = defineProps<{
-  label?: string;
+const { label, disabled = false } = defineProps<{
+  label: string;
   disabled?: boolean;
-}>()
+}>();
 </script>
 
 <template>
