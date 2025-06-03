@@ -6,17 +6,17 @@ import type { DataType, ArtistData } from "~/types/data";
 
 const baseURL = useRuntimeConfig().public.baseURL || '';
 const { data, error } = useFetch<DataType>(`${baseURL}/data.json`, { server: false });
-let artists = ref<ArtistData[] | null>();
+const  artists = ref<ArtistData[] | null>(null);
 
 watch(data, (newData) => {
   if (newData) {
-    artists.value = data.value.artists;
+    artists.value = data?.value.artists;
   }
 });
 
 watch(error, (newError) => {
   if (newError) {
-    console.error('Error while receiving JSON:', error.value);
+    console.error('Error while receiving JSON:', error?.value);
   }
 });
 </script>
