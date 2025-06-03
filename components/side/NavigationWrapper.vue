@@ -3,37 +3,36 @@ import type { NavigationGroup } from "~/types/navigation";
 
 const { title, items } = defineProps<NavigationGroup>();
 const route = useRoute();
+const baseURL = useRuntimeConfig().public.baseURL || '';
 </script>
 
 <template>
-  <nav class="navigation-wrapper" aria-labelledby="navigation-wrapper__title">
+  <nav class="navigation-wrapper">
     <h2
         v-if="title"
         class="navigation-wrapper__title"
-        id="navigation-wrapper__title"
     >
       {{ title }}
     </h2>
     <ul
-        v-if="items"
         class="navigation-wrapper__list"
     >
       <li
           v-for="item in items"
           :key="item.navPath"
           :title="item.title"
-          :class="['navigation-wrapper__item', { 'navigation-wrapper__item--active': route.path === item.navPath }]"
+          class="navigation-wrapper__item"
           @click.prevent="navigateTo(item.navPath)"
       >
-        <component
-            :is="item.icon"
-            class="navigation-wrapper__item-icon"
-        />
         <a
-            :href="item.navPath"
-            class="navigation-wrapper__link"
+            :href="`${baseURL}${item.navPath}`"
+            :class="['navigation-link', { 'navigation-link--active': route.path === `/${item.navPath}` }]"
         >
-          {{ item.title }}
+          <component
+              :is="item.icon"
+              class="navigation-link__icon"
+          />
+          <div class="navigation-link__title">{{ item.title }}</div>
         </a>
       </li>
     </ul>
@@ -50,7 +49,7 @@ const route = useRoute();
     gap: 4px;
   }
 
-  &__title, &__item {
+  &__title, .navigation-link {
     width: 100%;
     height: 40px;
     padding: 8px 16px;
@@ -61,19 +60,18 @@ const route = useRoute();
   &__title {
     font-weight: $font-weight;
   }
+}
 
-  &__item {
-    display: flex;
-    gap: 16px;
-    cursor: pointer;
+.navigation-link {
+  display: flex;
+  gap: 16px;
 
-    &:hover, &--active {
-      background-color: $color-highlight-bg;
-      border-radius: $border-radius;
-    }
+  &:hover, &--active {
+    background-color: $color-highlight-bg;
+    border-radius: 8px;
   }
 
-  &__item-icon {
+  &__icon {
     width: 24px;
     height: 24px;
   }
@@ -83,12 +81,16 @@ const route = useRoute();
   .navigation-wrapper {
     align-items: center;
 
-    &__title, &__link {
+    &__title {
       display: none;
     }
+  }
 
-    &__item {
-      padding: 8px;
+  .navigation-link {
+    padding: 8px;
+
+    &__title {
+      display: none;
     }
   }
 }
