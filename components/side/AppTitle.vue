@@ -13,7 +13,7 @@ const { title = 'app' } = defineProps<{
   </h1>
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @use "assets/styles/variables" as *;
 
 .app-title {

@@ -60,7 +60,7 @@ onBeforeUnmount(() => {
   </div>
 </template>
 
-<style scoped lang="scss">
+<style lang="scss">
 .carousel {
   position: relative;
   width: 100%;

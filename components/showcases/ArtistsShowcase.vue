@@ -43,7 +43,7 @@ watch(error, (newError) => {
   </ContentShowcase>
 </template>
 
-<style scoped lang="scss">
+<style lang="scss">
 .artists-showcase {
 
   &__blocks {

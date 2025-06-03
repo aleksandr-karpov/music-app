@@ -23,7 +23,7 @@ function changeActiveTab (tabName: Tab['name']): void {
   </div>
 </template>
 
-<style scoped lang="scss">
+<style lang="scss">
 @use "assets/styles/variables" as *;
 
 .tabs {

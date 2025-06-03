@@ -59,7 +59,7 @@ const activeTab = ref<Tab['name']>(tabs_collection[0].name);
   </section>
 </template>
 
-<style scoped lang="scss">
+<style lang="scss">
 @use "assets/styles/variables" as *;
 
 .home-page {

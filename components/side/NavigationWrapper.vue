@@ -40,7 +40,7 @@ const route = useRoute();
   </nav>
 </template>
 
-<style scoped lang="scss">
+<style lang="scss">
 @use "assets/styles/variables" as *;
 
 .navigation-wrapper {

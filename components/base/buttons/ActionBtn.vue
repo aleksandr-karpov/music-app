@@ -14,7 +14,7 @@ const { label = 'Action Btn', disabled = false } = defineProps<{
   </button>
 </template>
 
-<style scoped lang="scss">
+<style lang="scss">
 @use "assets/styles/variables" as *;
 
 .action-btn {

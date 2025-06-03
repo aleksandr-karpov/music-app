@@ -17,7 +17,7 @@ const { title = 'Title', subheading = 'Subheading' } = defineProps<{
   </section>
 </template>
 
-<style scoped lang="scss">
+<style lang="scss">
 @use "assets/styles/variables" as *;
 
 .content-showcase {

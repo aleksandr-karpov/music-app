@@ -33,7 +33,7 @@ const baseURL = useRuntimeConfig().public.baseURL || '';
   </div>
 </template>
 
-<style scoped lang="scss">
+<style lang="scss">
 @use "assets/styles/variables" as *;
 
 .card {

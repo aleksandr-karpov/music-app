@@ -10,7 +10,7 @@ const { msg = 'This block is empty' } = defineProps<{
   </h3>
 </template>
 
-<style scoped lang="scss">
+<style lang="scss">
 @use "assets/styles/variables" as *;
 
 .stub {
