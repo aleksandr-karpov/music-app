@@ -11,6 +11,7 @@
 .default-layout {
   display: flex;
   height: 100%;
+  overflow: hidden;
 
   &__sidebar {
     flex-shrink: 0;
@@ -18,8 +19,8 @@
 
   &__main-view {
     flex: 1;
-    height: 100%;
     min-width: 0;
+    overflow-y: auto;
   }
 }
 </style>

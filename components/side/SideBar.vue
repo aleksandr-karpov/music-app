@@ -53,7 +53,7 @@ const libraryNavigation: NavigationGroup = {
         title="Music app"
         class="sidebar__title"
     />
-    <div class="sidebar__navs vertical-scroll-area">
+    <div class="sidebar__navs">
       <NavigationWrapper v-bind="discoverNavigation"/>
       <NavigationWrapper v-bind="libraryNavigation"/>
     </div>
@@ -68,11 +68,16 @@ const libraryNavigation: NavigationGroup = {
   border-right: 1px solid #E0E0E0;
   box-shadow: 1px 0 3px -1px rgba(0, 0, 0, 0.5);
   padding: 24px 0;
+  z-index: 2;
 
   &, &__navs {
     display: flex;
     flex-direction: column;
     gap: 24px;
+  }
+
+  &__navs {
+    overflow-y: auto;
   }
 
   &__title, &__navs {

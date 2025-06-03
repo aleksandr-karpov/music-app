@@ -1,8 +1,6 @@
 @use 'normilize';
 @use 'variables' as *;
 
-@use 'scroll';
-
 @font-face {
   src: url('/assets/fonts/Inter.ttf') format('truetype');
   font-family: 'Inter';
@@ -13,5 +11,5 @@ body {
 }
 
 #__nuxt {
-  height: 100vh;
+  height: 100dvh;
 }

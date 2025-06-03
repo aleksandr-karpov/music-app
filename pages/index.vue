@@ -41,7 +41,7 @@ const activeTab = ref<Tab['name']>(tabs_collection[0].name);
     <TabPanels
         :tabs="tabs_collection"
         :active-tab="activeTab"
-        class="home-page__tab-panels vertical-scroll-area"
+        class="home-page__tab-panels"
     >
       <template v-slot:tab1>
         <div class="home-page__showcases">
@@ -63,25 +63,19 @@ const activeTab = ref<Tab['name']>(tabs_collection[0].name);
 @use "assets/styles/variables" as *;
 
 .home-page {
-  width: 100%;
-  height: 100%;
-  padding: 24px 0;
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
-
-  &__navigation, &__tab-panels {
-    padding: 0 80px;
-  }
 
   &__navigation {
+    position: sticky;
+    top: 0;
+    padding: 24px 80px;
     display: flex;
     justify-content: space-between;
+    background-color: $color-bg-light;
+    z-index: 1;
   }
 
   &__tab-panels {
-    width: 100%;
-    height: 100%;
+    padding: 8px 80px 24px;
   }
 
   &__showcases {
@@ -94,8 +88,12 @@ const activeTab = ref<Tab['name']>(tabs_collection[0].name);
 @media (max-width: $breakpoint-md) {
   .home-page {
 
-    &__navigation, &__tab-panels {
-      padding: 0 24px;
+    &__navigation {
+      padding: 24px;
+    }
+
+    &__tab-panels {
+      padding: 8px 24px 24px;
     }
   }
 }
