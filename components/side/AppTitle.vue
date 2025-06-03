@@ -6,6 +6,7 @@ const { title } = defineProps<{
 
 <template>
   <h1
+      v-if="title"
       :data-short="title[0].toUpperCase()"
       class="app-title"
   >
@@ -21,7 +22,6 @@ const { title } = defineProps<{
   font-size: $font-size-title-md;
   font-weight: $font-weight;
   line-height: $line-height;
-  margin: 0 16px;
 }
 
 @media (max-width: $breakpoint-md) {
@@ -31,7 +31,6 @@ const { title } = defineProps<{
     align-items: center;
     justify-content: center;
     font-size: 0;
-    margin: 0;
 
     &::before {
       content: attr(data-short);

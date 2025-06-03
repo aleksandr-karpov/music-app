@@ -76,12 +76,16 @@ const libraryNavigation: NavigationGroup = {
     gap: 24px;
   }
 
-  &__navs {
-    overflow-y: auto;
-  }
-
   &__title, &__navs {
     padding: 0 8px;
+  }
+
+  &__title {
+    margin: 0 16px;
+  }
+
+  &__navs {
+    overflow-y: auto;
   }
 }
 
