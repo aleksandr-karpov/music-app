@@ -35,14 +35,14 @@ const { title, subheading } = defineProps<{
   &__title {
     color: $color-text-light-bg;
     font-size: $font-size-title-lg;
-    font-weight: $font-weight;
+    font-weight: $font-weight-base;
     line-height: 110%;
   }
 
   &__subheading {
     color: #454545;
     font-size: $font-size-base;
-    line-height: $line-height;
+    line-height: $line-height-base;
     font-weight: normal;
   }
 }

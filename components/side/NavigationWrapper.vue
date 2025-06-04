@@ -58,7 +58,7 @@ const baseURL = useRuntimeConfig().public.baseURL || '';
   }
 
   &__title {
-    font-weight: $font-weight;
+    font-weight: $font-weight-base;
   }
 }
 

@@ -22,6 +22,6 @@ const { msg } = defineProps<{
   align-items: center;
   color: $color-text-light-bg;
   font-size: $font-size-title-lg;
-  font-weight: $font-weight;
+  font-weight: $font-weight-base;
 }
 </style>

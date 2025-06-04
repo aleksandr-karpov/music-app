@@ -2,7 +2,7 @@
 import AppTitle from "~/components/side/AppTitle.vue";
 import NavigationWrapper from "~/components/side/NavigationWrapper.vue";
 import type { NavigationGroup } from "~/types/navigation";
-import { defineAsyncComponent } from 'vue';
+import { defineAsyncComponent } from "vue";
 
 const discoverNavigation: NavigationGroup = {
   title: 'Discover',

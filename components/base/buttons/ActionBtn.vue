@@ -19,7 +19,7 @@ const { label, disabled = false } = defineProps<{
 
 .action-btn {
   height: 40px;
-  border-radius: $border-radius;
+  border-radius: 8px;
   padding: 8px 16px;
   background-color: $color-bg-dark;
   color: $color-text-dark-bg;

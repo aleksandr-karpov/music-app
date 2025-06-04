@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, onMounted, onBeforeUnmount } from 'vue';
+import { ref, onMounted, onBeforeUnmount } from "vue";
 import ActionBtn from "~/components/base/buttons/ActionBtn.vue";
 
 const { scrollAmount } = defineProps<{

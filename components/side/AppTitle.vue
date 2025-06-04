@@ -20,8 +20,8 @@ const { title } = defineProps<{
 .app-title {
   color: $color-text-light-bg;
   font-size: $font-size-title-md;
-  font-weight: $font-weight;
-  line-height: $line-height;
+  font-weight: $font-weight-base;
+  line-height: $line-height-base;
 }
 
 @media (max-width: $breakpoint-md) {

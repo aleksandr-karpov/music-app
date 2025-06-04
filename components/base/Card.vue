@@ -20,15 +20,15 @@ const baseURL = useRuntimeConfig().public.baseURL || '';
         :height="img_height"
         class="card__img"
     >
-    <span
+    <div
         v-if="img_label"
         class="card__img-label"
     >
       {{ img_label }}
-    </span>
+    </div>
     <div class="card__info">
-      <span class="card__title">{{ title }}</span>
-      <span class="card__description">{{ description }}</span>
+      <div class="card__title">{{ title }}</div>
+      <div class="card__description">{{ description }}</div>
     </div>
   </div>
 </template>
@@ -49,7 +49,7 @@ const baseURL = useRuntimeConfig().public.baseURL || '';
   }
 
   &__img {
-    border-radius: $border-radius;
+    border-radius: 8px;
   }
 
   &__img-label {
@@ -58,21 +58,21 @@ const baseURL = useRuntimeConfig().public.baseURL || '';
     left: 16px;
     color: $color-text-dark-bg;
     font-size: 32px;
-    font-weight: $font-weight;
+    font-weight: $font-weight-base;
     pointer-events: none;
   }
 
   &__title {
     color: $color-text-light-bg;
     font-size: $font-size-title-md;
-    font-weight: $font-weight;
-    line-height: $line-height;
+    font-weight: $font-weight-base;
+    line-height: $line-height-base;
   }
 
   &__description {
     color: #454545;
     font-size: $font-size-base;
-    line-height: $line-height;
+    line-height: $line-height-base;
   }
 }
 </style>

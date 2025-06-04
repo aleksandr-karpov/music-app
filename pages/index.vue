@@ -2,10 +2,10 @@
 import TabPanels from "~/components/tab-panels/TabPanels.vue";
 import Tabs from "~/components/tab-panels/Tabs.vue";
 import ActionBtn from "~/components/base/buttons/ActionBtn.vue";
-import type { Tab } from "~/types/tabs";
 import Stub from "~/components/base/Stub.vue";
 import PlaylistsShowcase from "~/components/showcases/PlaylistsShowcase.vue";
 import ArtistsShowcase from "~/components/showcases/ArtistsShowcase.vue";
+import type { Tab } from "~/types/tabs";
 
 useSeoMeta({
   title: 'Home - Music App',
@@ -33,7 +33,7 @@ const activeTab = ref<Tab['name']>(tabs_collection[0].name);
 </script>
 
 <template>
-  <section class="home-page">
+  <div class="home-page">
     <div class="home-page__navigation">
       <Tabs :tabs="tabs_collection" v-model="activeTab" />
       <ActionBtn label="Call to action"/>
@@ -56,7 +56,7 @@ const activeTab = ref<Tab['name']>(tabs_collection[0].name);
         <Stub msg="This tab is empty"/>
       </template>
     </TabPanels>
-  </section>
+  </div>
 </template>
 
 <style lang="scss">

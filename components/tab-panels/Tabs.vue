@@ -30,7 +30,7 @@ function changeActiveTab (tabName: Tab['name']): void {
   display: inline-block;
   height: 40px;
   background-color: $color-highlight-bg;
-  border-radius: $border-radius;
+  border-radius: 8px;
   padding: 8px;
 
   &__item {
