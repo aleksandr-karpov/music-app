@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import Carousel from "~/components/base/Carousel.vue";
-import Card from "~/components/base/Card.vue";
+import ArtistCard from "~/components/cards/ArtistCard.vue";
 import type { DataType, ArtistData } from "~/types/data";
 
 const baseURL = useRuntimeConfig().public.baseURL || '';
@@ -32,11 +32,10 @@ watch(error, (newError) => {
     <div class="base-showcase__content">
       <Carousel :scrollAmount="176">
         <div class="artists-showcase__blocks">
-          <Card
-              v-for="(artist, index) in artists" :key="index"
+          <ArtistCard
+              v-for="(artist, index) in artists"
+              :key="index"
               :img_src="artist.img_src"
-              img_width="144"
-              img_height="144"
               :title="artist.name"
               :description="artist.description"
           />

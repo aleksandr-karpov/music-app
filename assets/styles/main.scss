@@ -41,3 +41,34 @@ body {
     font-weight: normal;
   }
 }
+
+// Base card
+.base-card {
+  position: relative;
+  gap: 12px;
+  width: fit-content;
+  cursor: pointer;
+  flex-shrink: 0;
+
+  &, &__info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__img {
+    border-radius: 8px;
+  }
+
+  &__title {
+    color: $color-text-light-bg;
+    font-size: $font-size-title-md;
+    font-weight: $font-weight-base;
+    line-height: $line-height-base;
+  }
+
+  &__description {
+    color: #454545;
+    font-size: $font-size-base;
+    line-height: $line-height-base;
+  }
+}

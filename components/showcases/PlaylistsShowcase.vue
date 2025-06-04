@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import Carousel from "~/components/base/Carousel.vue";
-import Card from "~/components/base/Card.vue";
+import PlaylistCard from "~/components/cards/PlaylistCard.vue";
 import type { DataType, PlaylistData } from "~/types/data";
 
 const baseURL = useRuntimeConfig().public.baseURL || '';
@@ -32,11 +32,10 @@ watch(error, (newError) => {
     <div class="base-showcase__content">
       <Carousel :scrollAmount="264">
         <div class="playlists-showcase__blocks">
-          <Card
-              v-for="playlist in playlists" :key="playlist.name"
+          <PlaylistCard
+              v-for="playlist in playlists"
+              :key="playlist.name"
               :img_src="playlist.img_src"
-              img_width="232"
-              img_height="232"
               :img_label="playlist.title"
               :title="playlist.title"
               :description="playlist.description"
