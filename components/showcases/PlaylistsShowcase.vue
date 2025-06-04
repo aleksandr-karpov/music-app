@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import Carousel from "~/components/base/Carousel.vue";
 import Card from "~/components/base/Card.vue";
-import ContentShowcase from "~/components/showcases/base/ContentShowcase.vue";
 import type { DataType, PlaylistData } from "~/types/data";
 
 const baseURL = useRuntimeConfig().public.baseURL || '';
@@ -22,26 +21,30 @@ watch(error, (newError) => {
 </script>
 
 <template>
-  <ContentShowcase
+  <section
       v-if="playlists"
-      title="Title"
-      subheading="Subheading"
-      class="playlists-showcase"
+      class="base-showcase playlists-showcase"
   >
-    <Carousel :scrollAmount="264">
-      <div class="playlists-showcase__blocks">
-        <Card
-            v-for="playlist in playlists" :key="playlist.name"
-            :img_src="playlist.img_src"
-            img_width="232"
-            img_height="232"
-            :img_label="playlist.title"
-            :title="playlist.title"
-            :description="playlist.description"
-        />
-      </div>
-    </Carousel>
-  </ContentShowcase>
+    <div class="base-showcase__description">
+      <h3 class="base-showcase__title">Title</h3>
+      <h4 class="base-showcase__subheading">Subheading</h4>
+    </div>
+    <div class="base-showcase__content">
+      <Carousel :scrollAmount="264">
+        <div class="playlists-showcase__blocks">
+          <Card
+              v-for="playlist in playlists" :key="playlist.name"
+              :img_src="playlist.img_src"
+              img_width="232"
+              img_height="232"
+              :img_label="playlist.title"
+              :title="playlist.title"
+              :description="playlist.description"
+          />
+        </div>
+      </Carousel>
+    </div>
+  </section>
 </template>
 
 <style lang="scss">
