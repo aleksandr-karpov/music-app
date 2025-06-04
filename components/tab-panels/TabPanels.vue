@@ -6,15 +6,19 @@ const { tabs, activeTab } = defineProps<TabPanels>();
 
 <template>
   <div class="tab-panels">
-    <div
+    <template
         v-for="tab in tabs"
         :key="tab.name"
-        class="tab-panels__panel"
     >
-      <slot
+      <div
           v-if="$slots[tab.name] && activeTab === tab.name"
-          :name="tab.name"
-      />
-    </div>
+          class="tab-panels__panel"
+      >
+        <slot
+            v-if="$slots[tab.name] && activeTab === tab.name"
+            :name="tab.name"
+        />
+      </div>
+    </template>
   </div>
 </template>
